@@ -1,0 +1,367 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+
+    <changeSet id="1.0.0" author="alina.klisheva">
+        <createTable tableName="users">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+
+            <column name="username" type="VARCHAR(25)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+
+            <column name="email" type="VARCHAR(50)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+
+            <column name="first_name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="last_name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="password" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="patronymic" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="phone" type="VARCHAR(11)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+
+            <column name="created" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="updated" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="status" type="VARCHAR(25)" defaultValue="ACTIVE">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="1.0.1" author="alina.klisheva">
+        <createTable tableName="roles">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="name" type="VARCHAR(100)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+
+            <column name="created" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="updated" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="status" type="VARCHAR(25)" defaultValue="ACTIVE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="1.0.2" author="alina.klisheva">
+        <createTable tableName="user_roles">
+            <column name="user_id" type="BIGINT">
+            </column>
+
+            <column name="role_id" type="BIGINT">
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="1.0.3" author="alina.klisheva">
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="user_roles"
+                                 constraintName="fk_user_roles_user"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+
+    <changeSet id="1.0.4" author="alina.klisheva">
+        <addForeignKeyConstraint baseColumnNames="role_id"
+                                 baseTableName="user_roles"
+                                 constraintName="fk_user_roles_roles"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="roles"/>
+    </changeSet>
+
+    <changeSet id="1.0.5" author="alina.klisheva">
+        <insert tableName="roles">
+            <column name="name" value="ROLE_USER"/>
+        </insert>
+
+        <insert tableName="roles">
+            <column name="name" value="ROLE_ADMIN"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="3.0.6" author="alina.klisheva">
+        <createTable tableName="construction">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="owner" type="BIGINT">
+            </column>
+
+            <column name="region" type="VARCHAR(60)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="city" type="VARCHAR(60)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="street" type="VARCHAR(60)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="building" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="const_name" type="VARCHAR(35)" defaultValue="Проект">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="image" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="created" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="updated" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="status" type="VARCHAR(25)" defaultValue="ACTIVE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="1.0.7" author="alina.klisheva">
+        <addForeignKeyConstraint baseColumnNames="owner"
+                                 baseTableName="construction"
+                                 constraintName="fk_construction_user"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+
+    <changeSet id="1.0.8" author="alina.klisheva">
+        <createTable tableName="document">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="construction_id" type="BIGINT">
+            </column>
+
+            <column name="upload_date" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="doc_path" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="doc_name" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="type" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="created" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="updated" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="status" type="VARCHAR(25)" defaultValue="ACTIVE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="1.0.9" author="alina.klisheva">
+        <addForeignKeyConstraint baseColumnNames="construction_id"
+                                 baseTableName="document"
+                                 constraintName="fk_document_construction"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="construction"/>
+    </changeSet>
+
+    <changeSet id="1.1.0" author="alina.klisheva">
+        <createTable tableName="mastercall">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="construction_id" type="BIGINT">
+            </column>
+
+            <column name="departure_call_date" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="master_arriving_date" type="TIMESTAMP" >
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="theme" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="reason" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="report_path" type="VARCHAR(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="call_status" type="VARCHAR(100)">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="created" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="updated" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="status" type="VARCHAR(25)" defaultValue="ACTIVE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1.1.1" author="alina.klisheva">
+        <addForeignKeyConstraint baseColumnNames="construction_id"
+                                 baseTableName="mastercall"
+                                 constraintName="fk_call_construction"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"
+                                 referencedColumnNames="id"
+                                 referencedTableName="construction"/>
+    </changeSet>
+
+    <changeSet id="2.1.2" author="alina.klisheva">
+        <createTable tableName="chat_room">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="chat_id" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="sender_id" type="BIGINT" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="recipient_id" type="BIGINT" >
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="created" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="updated" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="status" type="VARCHAR(25)" defaultValue="ACTIVE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+
+    <changeSet id="3.1.3" author="alina.klisheva">
+        <createTable tableName="chat_message">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="chat_id" type="VARCHAR(45)">
+            </column>
+
+            <column name="sender_id" type="BIGINT" >
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="recipient_id" type="BIGINT" >
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="sender_name" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="recipient_name" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="content" type="VARCHAR(450)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="message_status" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="timestamp" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="created" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="updated" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="status" type="VARCHAR(25)" defaultValue="ACTIVE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+
+</databaseChangeLog>

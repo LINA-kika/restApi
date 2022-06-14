@@ -1,0 +1,201 @@
+2022-06-07 16:23:24.452  INFO 10036 --- [main] ru.rubcon.restApi.RestApiApplication     : Starting RestApiApplication using Java 17.0.1 on DESKTOP-DABRT47 with PID 10036 (C:\Users\alina\Desktop\project\rubcon\restApi\target\classes started by alina in C:\Users\alina\Desktop\project\rubcon\restApi)
+2022-06-07 16:23:24.465  INFO 10036 --- [main] ru.rubcon.restApi.RestApiApplication     : No active profile set, falling back to default profiles: default
+2022-06-07 16:23:27.668  INFO 10036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07 16:23:27.866  INFO 10036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 173 ms. Found 7 JPA repository interfaces.
+2022-06-07 16:23:28.811  INFO 10036 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-07 16:23:28.822  INFO 10036 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07 16:23:28.822  INFO 10036 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-06-07 16:23:29.038  INFO 10036 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-07 16:23:29.038  INFO 10036 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4389 ms
+2022-06-07 16:23:30.257  INFO 10036 --- [main] liquibase.database                       : Set default schema name to public
+2022-06-07 16:23:30.327  INFO 10036 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2022-06-07 16:23:31.035  INFO 10036 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2022-06-07 16:23:31.157  INFO 10036 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2022-06-07 16:23:31.381  INFO 10036 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07 16:23:31.477  INFO 10036 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-06-07 16:23:31.704  INFO 10036 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-07 16:23:31.815  INFO 10036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-07 16:23:31.884  INFO 10036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-07 16:23:31.900  INFO 10036 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-06-07 16:23:32.836  INFO 10036 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07 16:23:32.852  INFO 10036 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07 16:23:33.454  WARN 10036 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07 16:23:35.008  WARN 10036 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-07 16:23:36.708  INFO 10036 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e44825e, org.springframework.security.web.context.SecurityContextPersistenceFilter@64641bb2, org.springframework.security.web.header.HeaderWriterFilter@3eff5c32, org.springframework.security.web.authentication.logout.LogoutFilter@7900d917, ru.rubcon.restApi.security.jwt.JwtTokenFilter@2e8488f4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6bed8d98, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ab56a77, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2822ee4b, org.springframework.security.web.session.SessionManagementFilter@59df8444, org.springframework.security.web.access.ExceptionTranslationFilter@69abff1d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3abe8714]
+2022-06-07 16:23:36.725  INFO 10036 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2022-06-07 16:23:36.787  INFO 10036 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-07 16:23:36.790  INFO 10036 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-06-07 16:23:36.790  INFO 10036 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@742ce3ad]]
+2022-06-07 16:23:36.790  INFO 10036 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2022-06-07 16:23:36.815  INFO 10036 --- [main] ru.rubcon.restApi.RestApiApplication     : Started RestApiApplication in 12.854 seconds (JVM running for 13.976)
+2022-06-07 16:23:37.152  INFO 10036 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-07 16:23:37.153  INFO 10036 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-07 16:23:37.156  INFO 10036 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-06-07 16:23:37.554  INFO 10036 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as f7ed42697dbb
+2022-06-07 16:24:33.939  INFO 10036 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2022-06-07 16:25:49.523  INFO 10036 --- [http-nio-8080-exec-5] ru.rubcon.restApi.services.UserService   : IN getById - user: ru.rubcon.restApi.models.User@329f4b4d found by id: {}
+2022-06-07 16:25:51.882  INFO 10036 --- [http-nio-8080-exec-4] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 5 containing ru.rubcon.restApi.models.MasterCall instances found with theme: 
+2022-06-07 16:25:54.185  INFO 10036 --- [http-nio-8080-exec-8] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 3 containing ru.rubcon.restApi.models.MasterCall instances found with theme: п
+2022-06-07 16:25:56.317  INFO 10036 --- [http-nio-8080-exec-9] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 2 containing ru.rubcon.restApi.models.MasterCall instances found with theme: пр
+2022-06-07 16:25:57.086  INFO 10036 --- [http-nio-8080-exec-2] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 0 containing UNKNOWN instances found with theme: прр
+2022-06-07 16:25:58.704  INFO 10036 --- [http-nio-8080-exec-4] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 2 containing ru.rubcon.restApi.models.MasterCall instances found with theme: пр
+2022-06-07 16:25:59.683  INFO 10036 --- [http-nio-8080-exec-8] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 3 containing ru.rubcon.restApi.models.MasterCall instances found with theme: п
+2022-06-07 16:26:00.092  INFO 10036 --- [http-nio-8080-exec-9] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 5 containing ru.rubcon.restApi.models.MasterCall instances found with theme: 
+2022-06-07 16:26:00.860  INFO 10036 --- [http-nio-8080-exec-6] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 4 containing ru.rubcon.restApi.models.MasterCall instances found with theme: о
+2022-06-07 16:26:05.652  INFO 10036 --- [http-nio-8080-exec-3] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 5 containing ru.rubcon.restApi.models.MasterCall instances found with theme: 
+2022-06-07 16:26:07.068  INFO 10036 --- [http-nio-8080-exec-8] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 3 containing ru.rubcon.restApi.models.MasterCall instances found with theme: п
+2022-06-07 16:26:08.433  INFO 10036 --- [http-nio-8080-exec-9] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 2 of 3 containing ru.rubcon.restApi.models.MasterCall instances found with theme: п
+2022-06-07 16:26:09.511  INFO 10036 --- [http-nio-8080-exec-6] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 3 of 3 containing ru.rubcon.restApi.models.MasterCall instances found with theme: п
+2022-06-07 16:26:10.347  INFO 10036 --- [http-nio-8080-exec-2] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 4 of 3 containing UNKNOWN instances found with theme: п
+2022-06-07 16:26:13.833  INFO 10036 --- [http-nio-8080-exec-4] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 5 containing ru.rubcon.restApi.models.MasterCall instances found with theme: 
+2022-06-07 16:26:15.011  INFO 10036 --- [http-nio-8080-exec-8] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 4 containing ru.rubcon.restApi.models.MasterCall instances found with theme: о
+2022-06-07 16:26:21.588  INFO 10036 --- [http-nio-8080-exec-6] ru.rubcon.restApi.services.UserService   : IN getById - user: ru.rubcon.restApi.models.User@1126d5e7 found by id: {}
+2022-06-07 16:26:37.606  INFO 10036 --- [http-nio-8080-exec-8] ru.rubcon.restApi.services.UserService   : IN getById - user: ru.rubcon.restApi.models.User@48ec9fe0 found by id: {}
+2022-06-07 16:26:41.141  INFO 10036 --- [http-nio-8080-exec-9] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 4 containing ru.rubcon.restApi.models.MasterCall instances found with theme: 
+2022-06-07 16:26:42.728  INFO 10036 --- [http-nio-8080-exec-5] r.r.restApi.services.DocumentService     : IN findByDocName - documents: Page 1 of 2 containing ru.rubcon.restApi.models.Document instances found by type 
+2022-06-07 16:26:44.522  INFO 10036 --- [http-nio-8080-exec-6] r.r.restApi.services.DocumentService     : IN findByDocName - documents: Page 1 of 1 containing ru.rubcon.restApi.models.Document instances found by type д
+2022-06-07 16:26:46.474  INFO 10036 --- [http-nio-8080-exec-2] r.r.restApi.services.DocumentService     : IN findByDocName - documents: Page 1 of 2 containing ru.rubcon.restApi.models.Document instances found by type 
+2022-06-07 16:26:48.114  INFO 10036 --- [http-nio-8080-exec-7] r.r.restApi.services.DocumentService     : IN findByDocName - documents: Page 2 of 2 containing ru.rubcon.restApi.models.Document instances found by type 
+2022-06-07 16:26:49.034  INFO 10036 --- [http-nio-8080-exec-8] r.r.restApi.services.DocumentService     : IN findByDocName - documents: Page 3 of 2 containing UNKNOWN instances found by type 
+2022-06-07 16:26:50.760  INFO 10036 --- [http-nio-8080-exec-10] r.r.restApi.services.DocumentService     : IN findByDocName - documents: Page 1 of 1 containing ru.rubcon.restApi.models.Document instances found by type к
+2022-06-07 16:28:59.304  INFO 10036 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2022-06-07 16:28:59.305  INFO 10036 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@742ce3ad]]
+2022-06-07 16:28:59.306  INFO 10036 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2022-06-07 16:29:01.481  INFO 10036 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07 16:29:01.496  INFO 10036 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-07 16:29:01.504  INFO 10036 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-07 16:29:07.349  INFO 1204 --- [main] ru.rubcon.restApi.RestApiApplication     : Starting RestApiApplication using Java 17.0.1 on DESKTOP-DABRT47 with PID 1204 (C:\Users\alina\Desktop\project\rubcon\restApi\target\classes started by alina in C:\Users\alina\Desktop\project\rubcon\restApi)
+2022-06-07 16:29:07.351  INFO 1204 --- [main] ru.rubcon.restApi.RestApiApplication     : No active profile set, falling back to default profiles: default
+2022-06-07 16:29:08.389  INFO 1204 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07 16:29:08.476  INFO 1204 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 7 JPA repository interfaces.
+2022-06-07 16:29:08.903  INFO 1204 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-07 16:29:08.911  INFO 1204 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07 16:29:08.911  INFO 1204 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-06-07 16:29:09.003  INFO 1204 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-07 16:29:09.003  INFO 1204 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1599 ms
+2022-06-07 16:29:09.475  INFO 1204 --- [main] liquibase.database                       : Set default schema name to public
+2022-06-07 16:29:09.522  INFO 1204 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2022-06-07 16:29:09.894  INFO 1204 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2022-06-07 16:29:09.951  INFO 1204 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2022-06-07 16:29:10.014  INFO 1204 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07 16:29:10.051  INFO 1204 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-06-07 16:29:10.155  INFO 1204 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-07 16:29:10.231  INFO 1204 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-07 16:29:10.278  INFO 1204 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-07 16:29:10.291  INFO 1204 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-06-07 16:29:10.808  INFO 1204 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07 16:29:10.818  INFO 1204 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07 16:29:11.139  WARN 1204 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07 16:29:11.996  WARN 1204 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-07 16:29:12.710  INFO 1204 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@581661d6, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d9069ab, org.springframework.security.web.header.HeaderWriterFilter@77e8492f, org.springframework.security.web.authentication.logout.LogoutFilter@9760f17, ru.rubcon.restApi.security.jwt.JwtTokenFilter@4b87ea3c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@158119bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31e08c61, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ad9f06a, org.springframework.security.web.session.SessionManagementFilter@1eedf268, org.springframework.security.web.access.ExceptionTranslationFilter@424c8ebe, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2f4a89fa]
+2022-06-07 16:29:12.721  INFO 1204 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2022-06-07 16:29:12.758  INFO 1204 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-07 16:29:12.759  INFO 1204 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-06-07 16:29:12.760  INFO 1204 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5b810b54]]
+2022-06-07 16:29:12.760  INFO 1204 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2022-06-07 16:29:12.774  INFO 1204 --- [main] ru.rubcon.restApi.RestApiApplication     : Started RestApiApplication in 5.755 seconds (JVM running for 6.887)
+2022-06-07 16:29:12.918  INFO 1204 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-07 16:29:12.919  INFO 1204 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-07 16:29:12.921  INFO 1204 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-06-07 16:29:13.224  INFO 1204 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as f7ed42697dbb
+2022-06-07 16:29:21.568  INFO 1204 --- [http-nio-8080-exec-1] ru.rubcon.restApi.services.UserService   : IN getById - user: ru.rubcon.restApi.models.User@e120536 found by id: {}
+2022-06-07 16:29:23.649  INFO 1204 --- [http-nio-8080-exec-9] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 5 containing ru.rubcon.restApi.models.MasterCall instances found with theme: 
+2022-06-07 16:29:25.423  INFO 1204 --- [http-nio-8080-exec-3] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 2 containing ru.rubcon.restApi.models.MasterCall instances found with theme: п
+2022-06-07 16:29:27.068  INFO 1204 --- [http-nio-8080-exec-1] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 2 of 2 containing ru.rubcon.restApi.models.MasterCall instances found with theme: п
+2022-06-07 16:29:27.765  INFO 1204 --- [http-nio-8080-exec-10] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 3 of 2 containing UNKNOWN instances found with theme: п
+2022-06-07 16:29:42.237  INFO 1204 --- [http-nio-8080-exec-3] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 4 containing ru.rubcon.restApi.models.MasterCall instances found with theme: 
+2022-06-07 16:29:42.264  INFO 1204 --- [http-nio-8080-exec-4] ru.rubcon.restApi.services.UserService   : IN getById - user: ru.rubcon.restApi.models.User@3562581b found by id: {}
+2022-06-07 16:29:44.712  INFO 1204 --- [http-nio-8080-exec-6] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 1 containing ru.rubcon.restApi.models.MasterCall instances found with theme: с
+2022-06-07 16:29:46.349  INFO 1204 --- [http-nio-8080-exec-8] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 2 of 1 containing UNKNOWN instances found with theme: с
+2022-06-07 16:29:48.392  INFO 1204 --- [http-nio-8080-exec-2] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 4 containing ru.rubcon.restApi.models.MasterCall instances found with theme: 
+2022-06-07 16:29:49.077  INFO 1204 --- [http-nio-8080-exec-1] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 2 containing ru.rubcon.restApi.models.MasterCall instances found with theme: п
+2022-06-07 16:29:50.634  INFO 1204 --- [http-nio-8080-exec-5] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 2 of 2 containing ru.rubcon.restApi.models.MasterCall instances found with theme: п
+2022-06-07 16:29:51.149  INFO 1204 --- [http-nio-8080-exec-6] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 3 of 2 containing UNKNOWN instances found with theme: п
+2022-06-07 16:29:52.294  INFO 1204 --- [http-nio-8080-exec-8] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 4 containing ru.rubcon.restApi.models.MasterCall instances found with theme: 
+2022-06-07 16:29:53.510  INFO 1204 --- [http-nio-8080-exec-1] ru.rubcon.restApi.services.UserService   : IN getById - user: ru.rubcon.restApi.models.User@3c357e4a found by id: {}
+2022-06-07 16:29:56.002  INFO 1204 --- [http-nio-8080-exec-5] r.r.restApi.services.DocumentService     : IN findByDocName - documents: Page 1 of 2 containing ru.rubcon.restApi.models.Document instances found by type 
+2022-06-07 16:29:58.091  INFO 1204 --- [http-nio-8080-exec-7] ru.rubcon.restApi.services.UserService   : IN getById - user: ru.rubcon.restApi.models.User@241f275f found by id: {}
+2022-06-07 16:29:59.258  INFO 1204 --- [http-nio-8080-exec-9] r.r.restApi.services.DocumentService     : IN findByDocName - documents: Page 1 of 1 containing ru.rubcon.restApi.models.Document instances found by type а
+2022-06-07 16:30:01.139  INFO 1204 --- [http-nio-8080-exec-3] r.r.restApi.services.DocumentService     : IN findByDocNameAndType - documents: Page 1 of 1 containing ru.rubcon.restApi.models.Document instances found by name а and type ACT
+2022-06-07 16:30:02.047  INFO 1204 --- [http-nio-8080-exec-4] r.r.restApi.services.DocumentService     : IN findByDocNameAndType - documents: Page 1 of 0 containing UNKNOWN instances found by name а and type CONTRACT
+2022-06-07 16:30:03.099  INFO 1204 --- [http-nio-8080-exec-6] r.r.restApi.services.DocumentService     : IN findByDocNameAndType - documents: Page 1 of 0 containing UNKNOWN instances found by name а and type DRAWING
+2022-06-07 16:30:03.916  INFO 1204 --- [http-nio-8080-exec-8] r.r.restApi.services.DocumentService     : IN getDocsByConstId - document: Page 1 of 2 containing ru.rubcon.restApi.models.Document instances found by construction with id: {}
+2022-06-07 16:30:05.259  INFO 1204 --- [http-nio-8080-exec-2] r.r.restApi.services.DocumentService     : IN findByDocName - documents: Page 1 of 2 containing ru.rubcon.restApi.models.Document instances found by type 
+2022-06-07 16:30:06.401  INFO 1204 --- [http-nio-8080-exec-1] r.r.restApi.services.DocumentService     : IN findByDocName - documents: Page 1 of 1 containing ru.rubcon.restApi.models.Document instances found by type д
+2022-06-07 16:30:07.476  INFO 1204 --- [http-nio-8080-exec-5] r.r.restApi.services.DocumentService     : IN findByDocName - documents: Page 2 of 1 containing UNKNOWN instances found by type д
+2022-06-07 16:30:09.074  INFO 1204 --- [http-nio-8080-exec-6] r.r.restApi.services.DocumentService     : IN findByDocNameAndType - documents: Page 1 of 0 containing UNKNOWN instances found by name д and type ACT
+2022-06-07 16:30:09.796  INFO 1204 --- [http-nio-8080-exec-8] r.r.restApi.services.DocumentService     : IN findByDocNameAndType - documents: Page 1 of 1 containing ru.rubcon.restApi.models.Document instances found by name д and type CONTRACT
+2022-06-07 16:30:10.891  INFO 1204 --- [http-nio-8080-exec-2] r.r.restApi.services.DocumentService     : IN findByDocNameAndType - documents: Page 1 of 0 containing UNKNOWN instances found by name д and type DRAWING
+2022-06-07 16:30:11.375  INFO 1204 --- [MessageBroker-4] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 2 total, 0 closed abnormally (0 connect failure, 0 send limit, 1 transport error)], stompSubProtocol[processed CONNECT(2)-CONNECTED(2)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 15, active threads = 0, queued tasks = 0, completed tasks = 15], outboundChannel[pool size = 3, active threads = 0, queued tasks = 0, completed tasks = 3], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 14]
+2022-06-07 16:35:22.405  INFO 1204 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2022-06-07 16:35:22.405  INFO 1204 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5b810b54]]
+2022-06-07 16:35:22.406  INFO 1204 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2022-06-07 16:35:24.542  INFO 1204 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07 16:35:24.549  INFO 1204 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-07 16:35:24.555  INFO 1204 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-07 16:36:39.699  INFO 19220 --- [main] ru.rubcon.restApi.RestApiApplication     : Starting RestApiApplication using Java 17.0.1 on DESKTOP-DABRT47 with PID 19220 (C:\Users\alina\Desktop\project\rubcon\restApi\target\classes started by alina in C:\Users\alina\Desktop\project\rubcon\restApi)
+2022-06-07 16:36:39.705  INFO 19220 --- [main] ru.rubcon.restApi.RestApiApplication     : No active profile set, falling back to default profiles: default
+2022-06-07 16:36:40.817  INFO 19220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-07 16:36:40.895  INFO 19220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 7 JPA repository interfaces.
+2022-06-07 16:36:41.276  INFO 19220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-07 16:36:41.283  INFO 19220 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07 16:36:41.283  INFO 19220 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-06-07 16:36:41.382  INFO 19220 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-07 16:36:41.383  INFO 19220 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1546 ms
+2022-06-07 16:36:41.849  INFO 19220 --- [main] liquibase.database                       : Set default schema name to public
+2022-06-07 16:36:41.900  INFO 19220 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2022-06-07 16:36:42.215  INFO 19220 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2022-06-07 16:36:42.284  INFO 19220 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2022-06-07 16:36:42.360  INFO 19220 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-07 16:36:42.419  INFO 19220 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-06-07 16:36:42.530  INFO 19220 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-07 16:36:42.597  INFO 19220 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-07 16:36:42.646  INFO 19220 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-07 16:36:42.656  INFO 19220 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-06-07 16:36:43.142  INFO 19220 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-07 16:36:43.148  INFO 19220 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07 16:36:43.460  WARN 19220 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-07 16:36:44.277  WARN 19220 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-07 16:36:44.936  INFO 19220 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7fef485d, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e435f0d, org.springframework.security.web.header.HeaderWriterFilter@36b1b28, org.springframework.security.web.authentication.logout.LogoutFilter@7d727123, ru.rubcon.restApi.security.jwt.JwtTokenFilter@53a4637c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@424c8ebe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@260d878a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27131d01, org.springframework.security.web.session.SessionManagementFilter@62ee32c6, org.springframework.security.web.access.ExceptionTranslationFilter@69f35d31, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@27df971b]
+2022-06-07 16:36:44.946  INFO 19220 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2022-06-07 16:36:44.980  INFO 19220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-07 16:36:44.981  INFO 19220 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-06-07 16:36:44.981  INFO 19220 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2c70da80]]
+2022-06-07 16:36:44.982  INFO 19220 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2022-06-07 16:36:44.996  INFO 19220 --- [main] ru.rubcon.restApi.RestApiApplication     : Started RestApiApplication in 5.953 seconds (JVM running for 7.534)
+2022-06-07 16:36:45.100  INFO 19220 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-07 16:36:45.101  INFO 19220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-07 16:36:45.102  INFO 19220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-07 16:36:45.360  INFO 19220 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as f7ed42697dbb
+2022-06-07 16:36:45.467  INFO 19220 --- [http-nio-8080-exec-2] ru.rubcon.restApi.services.UserService   : IN getById - user: ru.rubcon.restApi.models.User@4828fac2 found by id: {}
+2022-06-07 16:36:53.478  INFO 19220 --- [http-nio-8080-exec-7] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 4 containing ru.rubcon.restApi.models.MasterCall instances found with theme: 
+2022-06-07 16:36:58.000  INFO 19220 --- [http-nio-8080-exec-5] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 2 containing ru.rubcon.restApi.models.MasterCall instances found with theme: п
+2022-06-07 16:36:59.556  INFO 19220 --- [http-nio-8080-exec-10] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 2 of 2 containing ru.rubcon.restApi.models.MasterCall instances found with theme: п
+2022-06-07 16:37:00.084  INFO 19220 --- [http-nio-8080-exec-3] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 3 of 2 containing UNKNOWN instances found with theme: п
+2022-06-07 16:37:02.030  INFO 19220 --- [http-nio-8080-exec-4] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 4 containing ru.rubcon.restApi.models.MasterCall instances found with theme: 
+2022-06-07 16:37:03.278  INFO 19220 --- [http-nio-8080-exec-6] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 1 containing ru.rubcon.restApi.models.MasterCall instances found with theme: с
+2022-06-07 16:37:04.644  INFO 19220 --- [http-nio-8080-exec-5] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 2 of 1 containing UNKNOWN instances found with theme: с
+2022-06-07 16:37:06.939  INFO 19220 --- [http-nio-8080-exec-2] r.r.restApi.services.MasterCallService   : IN getCallsByName - mastercall: Page 1 of 4 containing ru.rubcon.restApi.models.MasterCall instances found with theme: 
+2022-06-07 16:37:08.183  INFO 19220 --- [http-nio-8080-exec-7] ru.rubcon.restApi.services.UserService   : IN getById - user: ru.rubcon.restApi.models.User@7f148ed5 found by id: {}
+2022-06-07 16:37:09.460  INFO 19220 --- [http-nio-8080-exec-8] r.r.restApi.services.DocumentService     : IN findByDocName - documents: Page 1 of 2 containing ru.rubcon.restApi.models.Document instances found by type 
+2022-06-07 16:37:11.051  INFO 19220 --- [http-nio-8080-exec-9] ru.rubcon.restApi.services.UserService   : IN getById - user: ru.rubcon.restApi.models.User@7869b5fe found by id: {}
+2022-06-07 16:37:11.835  INFO 19220 --- [http-nio-8080-exec-1] r.r.restApi.services.DocumentService     : IN findByDocName - documents: Page 1 of 1 containing ru.rubcon.restApi.models.Document instances found by type д
+2022-06-07 16:37:13.024  INFO 19220 --- [http-nio-8080-exec-2] r.r.restApi.services.DocumentService     : IN findByDocName - documents: Page 2 of 1 containing UNKNOWN instances found by type д
+2022-06-07 16:37:14.604  INFO 19220 --- [http-nio-8080-exec-7] r.r.restApi.services.DocumentService     : IN findByDocNameAndType - documents: Page 1 of 0 containing UNKNOWN instances found by name д and type ACT
+2022-06-07 16:37:15.552  INFO 19220 --- [http-nio-8080-exec-5] r.r.restApi.services.DocumentService     : IN findByDocNameAndType - documents: Page 1 of 1 containing ru.rubcon.restApi.models.Document instances found by name д and type CONTRACT
+2022-06-07 16:37:16.722  INFO 19220 --- [http-nio-8080-exec-10] r.r.restApi.services.DocumentService     : IN findByDocNameAndType - documents: Page 2 of 1 containing UNKNOWN instances found by name д and type CONTRACT
+2022-06-07 16:37:17.779  INFO 19220 --- [http-nio-8080-exec-3] r.r.restApi.services.DocumentService     : IN findByDocNameAndType - documents: Page 1 of 0 containing UNKNOWN instances found by name д and type DRAWING
+2022-06-07 16:37:18.808  INFO 19220 --- [http-nio-8080-exec-4] r.r.restApi.services.DocumentService     : IN getDocsByConstId - document: Page 1 of 2 containing ru.rubcon.restApi.models.Document instances found by construction with id: {}
+2022-06-07 16:37:20.226  INFO 19220 --- [http-nio-8080-exec-6] r.r.restApi.services.DocumentService     : IN findByDocName - documents: Page 1 of 2 containing ru.rubcon.restApi.models.Document instances found by type 
+2022-06-07 16:37:21.383  INFO 19220 --- [http-nio-8080-exec-5] r.r.restApi.services.DocumentService     : IN findByDocName - documents: Page 1 of 1 containing ru.rubcon.restApi.models.Document instances found by type к
+2022-06-07 16:37:23.149  INFO 19220 --- [http-nio-8080-exec-10] r.r.restApi.services.DocumentService     : IN findByDocNameAndType - documents: Page 1 of 0 containing UNKNOWN instances found by name к and type ACT
+2022-06-07 16:37:23.809  INFO 19220 --- [http-nio-8080-exec-3] r.r.restApi.services.DocumentService     : IN findByDocNameAndType - documents: Page 1 of 1 containing ru.rubcon.restApi.models.Document instances found by name к and type CONTRACT
+2022-06-07 16:37:24.750  INFO 19220 --- [http-nio-8080-exec-4] r.r.restApi.services.DocumentService     : IN findByDocNameAndType - documents: Page 1 of 0 containing UNKNOWN instances found by name к and type DRAWING
+2022-06-07 16:37:27.231  INFO 19220 --- [http-nio-8080-exec-5] ru.rubcon.restApi.services.UserService   : IN getById - user: ru.rubcon.restApi.models.User@4b4684f2 found by id: {}
+2022-06-07 16:37:43.701  INFO 19220 --- [MessageBroker-7] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 6, active threads = 0, queued tasks = 0, completed tasks = 6], outboundChannel[pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 2, completed tasks = 14]
+2022-06-07 16:37:43.943  INFO 19220 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2022-06-07 16:37:43.943  INFO 19220 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2c70da80]]
+2022-06-07 16:37:43.943  INFO 19220 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2022-06-07 16:37:46.078  INFO 19220 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-07 16:37:46.085  INFO 19220 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-07 16:37:46.091  INFO 19220 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
